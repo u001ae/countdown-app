@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Countdown App</title>
+    <link rel="stylesheet" href="my_countdown.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    <button class="fullscreen-btn" id="fullscreenBtn">⛶ Fullscreen</button>
+
+    <div class="container">
+        <h1>⏳ Countdown Timer</h1>
+
+        <div class="input-section">
+            <label>Enter target date and time:</label>
+            <input type="datetime-local" id="targetDate" />
+            <button id="startBtn">Start Countdown</button>
+        </div>
+
+
+<div class="end-screen" id="endScreen">
+  <h1>🎉 TIME’S UP! 🎉</h1>
+</div>
+
+
+        <div class="countdown">
+            <div><span id="days">00</span><p>Days</p></div>
+            <div><span id="hours">00</span><p>Hours</p></div>
+            <div><span id="minutes">00</span><p>Minutes</p></div>
+            <div><span id="seconds">00</span><p>Seconds</p></div>
+        </div>
+    </div>
+
+    <script src="my_countdown.js"></script>
+</body>
+</html>

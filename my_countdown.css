@@ -1,0 +1,189 @@
+/* General setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #0e0e0e;
+    color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #00ffe5;
+    text-shadow: 0 0 10px #00ffe5;
+}
+
+/* Input section */
+.input-section {
+    margin-bottom: 40px;
+}
+
+.input-section label {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.input-section input {
+    background: #1a1a1a;
+    border: 1px solid #00ffe5;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-section button {
+    background: #00ffe5;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-section button:hover {
+    background: #00c9b7;
+    transform: scale(1.05);
+}
+
+/* Countdown display */
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.countdown div {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 229, 0.2);
+    min-width: 100px;
+}
+
+.countdown span {
+    display: block;
+    font-size: 2.5em;
+    color: #00ffe5;
+}
+
+.countdown p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: #ccc;
+}
+
+
+/* === Smooth fade-in animation === */
+
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === Pulse effect on numbers === */
+.countdown span{
+    display: block;
+    font-size: 3em;
+    color: #00ffe5;
+    text-shadow: 0 0 15px #00ffe5;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        text-shadow: 0 0 5px #00ffe5, 0 0 10px #00ffe5;
+    }
+    to {
+        text-shadow:  0 0 20px #00ffe5, 0 0 40px #00ffe5;
+    }
+}
+
+/* === Fullscreen button ===*/
+.fullscreen-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: #00ffe5;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 229, 0.4);
+    transition: 0.2s;
+}
+
+.fullscreen-btn:hover {
+    background: #00c9b7;
+}
+
+
+/* === Ending Screen === */
+.end-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #00ffe5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    text-shadow: 0 0 25px #00ffe5, 0 0 50px #00ffe5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+    flex-direction: column;
+    z-index: 999;
+} 
+
+.end-screen.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.end-screen h1 {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #00ffe5, 0 0 40px #00ffe5;
+    }
+    to {
+        text-shadow: 0 0 40px #00ffe5, 0 0 80px #00ffe5;
+    }
+}
