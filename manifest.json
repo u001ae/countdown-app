@@ -9,12 +9,13 @@
   "orientation": "portrait",
   "id": "countdown.app.v1",
   "icons": [
-    {"src": "https://raw.githubusercontent.com/u001ae/countdown-app/main/icon1.png",
+    {
+      "src": "https://raw.githubusercontent.com/u001ae/countdown-app/main/icon1.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon2.png",
+      "src": "https://raw.githubusercontent.com/u001ae/countdown-app/main/icon2.png",
       "sizes": "512x512",
       "type": "image/png"
     }
